@@ -1,5 +1,6 @@
 <%= turbo_frame_tag dom_id(todo) do %>
   <li>
+    <%= check_box_tag dom_id(todo), 1, todo.completed?, data: { controller: "todo", todo_url_value: toggle_todo_path(todo), action: "click->todo#toggle"} %>
     <%= todo.title %>
     <%= link_to "Edit this todo", edit_todo_path(todo) %>
   </li>

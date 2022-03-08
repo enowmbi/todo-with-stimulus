@@ -1,5 +1,5 @@
 class TodosController < ApplicationController
-  before_action :set_todo, only: %i[ show edit update destroy ]
+  before_action :set_todo, only: %i[ show edit update destroy toggle ]
 
   # GET /todos or /todos.json
   def index
@@ -62,6 +62,10 @@ class TodosController < ApplicationController
     end
   end
 
+  def toggle
+    @todo.update(completed: @todo.completed? ? false : true)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_todo
@@ -70,6 +74,6 @@ class TodosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def todo_params
-      params.require(:todo).permit(:title)
+      params.require(:todo).permit(:title, :completed)
     end
 end

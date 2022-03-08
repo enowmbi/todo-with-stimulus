@@ -8,7 +8,8 @@
   <% @todos.each do |todo| %>
     <%= render todo %>
     <p>
-      <%= link_to "Show this todo", todo %>
+    <%= link_to "Show this todo", todo %>
+    <%= button_to "Destroy this todo", todo, method: :delete %>
     </p>
   <% end %>
 </div>
