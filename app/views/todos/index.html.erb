@@ -1,7 +1,9 @@
 <p style="color: green"><%= notice %></p>
 
 <%= turbo_stream_from "todos" %>
+<div id="new_form">
 <%= render "todos/form", todo: Todo.new %>
+</div>
 <h1>Todos</h1>
 
 <div id="todos">
