@@ -13,3 +13,31 @@
     This is the text that will be hidden and shown depending on the state of the button
   </div>
 </div>
+
+<div class="my-15" data-controller="greeting">
+  Enter your name: <input type="text" data-greeting-target="name"/>
+  <button data-action="click->greeting#sayHello">Say Hello </button>
+  <div data-greeting-target="result">
+  </div>
+</div>
+
+<div class="my-15" data-controller="search">
+  Search: <input type="text" data-search-target="field"  data-action="search#search" />
+  <div data-search-target="searchResults">
+  </div>
+</div>
+
+<div data-controller="code">
+  PIN: <input type ="text" readonly disabled value="#<%= SecureRandom.alphanumeric %>" data-code-target="source">
+  <button data-action="click->code#copy"> Copy </button>
+</div>
+
+<div data-controller="code">
+  PIN: <input type ="text" readonly disabled value="#<%= SecureRandom.alphanumeric %>" data-code-target="source">
+  <button data-action="click->code#copy"> Copy </button>
+</div>
+
+<div data-controller="code">
+  PIN: <input type ="text" readonly disabled value="#<%= SecureRandom.alphanumeric %>" data-code-target="source">
+  <a href="google.com" data-action="click->code#copy"> Copy </a>
+</div>
