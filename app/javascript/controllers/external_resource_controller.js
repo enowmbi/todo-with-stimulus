@@ -7,6 +7,8 @@ export default class extends Controller {
 
     connect() {
         console.log("external resource controller connnected !")
+        console.log(this.application)
+        console.log(this.element)
         this.load()
     }
 
