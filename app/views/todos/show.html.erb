@@ -41,3 +41,13 @@
   PIN: <input type ="text" readonly disabled value="#<%= SecureRandom.alphanumeric %>" data-code-target="source">
   <a href="google.com" data-action="click->code#copy"> Copy </a>
 </div>
+
+<div data-controller="slideshow" data-slideshow-index-value="0">
+  <button data-action="click->slideshow#previous"> Previous </button>
+  <button data-action="click->slideshow#next"> Next </button>
+
+  <div data-slideshow-target="slide">bange 1</div>
+  <div data-slideshow-target="slide">bange 2</div>
+  <div data-slideshow-target="slide">bange 3</div>
+  <div data-slideshow-target="slide">bange 4</div>
+</div>
